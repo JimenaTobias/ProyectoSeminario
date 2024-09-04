@@ -26,5 +26,15 @@ namespace ProyectoSeminario
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btn_ingresar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

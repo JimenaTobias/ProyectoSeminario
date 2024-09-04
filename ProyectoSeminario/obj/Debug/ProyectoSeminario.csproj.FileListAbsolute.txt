@@ -10,3 +10,4 @@ C:\Users\jimen\OneDrive\Escritorio\Jimena\Universidad\2024\Segundo Semestre\Semi
 C:\Users\jimen\OneDrive\Escritorio\Jimena\Universidad\2024\Segundo Semestre\Seminario de Tecnologías de Información\ProyectoSeminario\ProyectoSeminario\obj\Debug\ProyectoSeminario.exe
 C:\Users\jimen\OneDrive\Escritorio\Jimena\Universidad\2024\Segundo Semestre\Seminario de Tecnologías de Información\ProyectoSeminario\ProyectoSeminario\obj\Debug\ProyectoSeminario.pdb
 C:\Users\jimen\OneDrive\Escritorio\Jimena\Universidad\2024\Segundo Semestre\Seminario de Tecnologías de Información\ProyectoSeminario\ProyectoSeminario\obj\Debug\ProyectoSeminario.Inventario.resources
+C:\Users\jimen\OneDrive\Escritorio\Jimena\Universidad\2024\Segundo Semestre\Seminario de Tecnologías de Información\ProyectoSeminario\ProyectoSeminario\obj\Debug\ProyectoSeminario.Producto.resources
