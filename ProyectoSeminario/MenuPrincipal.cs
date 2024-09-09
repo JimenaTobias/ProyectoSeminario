@@ -21,5 +21,26 @@ namespace ProyectoSeminario
         {
 
         }
+        public void openForm(Form formHijo)
+        {
+            panel_container.Controls.Clear();
+            formHijo.TopLevel = false;
+            formHijo.FormBorderStyle = FormBorderStyle.None;
+            formHijo.Dock = DockStyle.Fill;
+            panel_container.Controls.Add(formHijo);
+            panel_container.Tag = formHijo;
+            formHijo.Show();
+        }
+
+
+        private void btn_prod_Click(object sender, EventArgs e)
+        {
+            this.openForm(new Producto());
+        }
+
+        private void btn_inv_Click(object sender, EventArgs e)
+        {
+            this.openForm(new Inventario());
+        }
     }
 }

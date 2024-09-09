@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProyectoSeminario.Models.Dao;
 
 namespace ProyectoSeminario
 {
@@ -34,7 +35,18 @@ namespace ProyectoSeminario
 
         private void btn_ingresar_Click(object sender, EventArgs e)
         {
-
+            string username = txt_username.Text;
+            string password = txt_password.Text;
+            bool loggued = Auth.Login(username, password);
+            if (loggued)
+            {
+                this.Visible = false;
+                MenuPrincipal frm = new MenuPrincipal();
+                frm.ShowDialog();
+                this.Visible = true;
+                return;
+            }
+            MessageBox.Show("Usuario o Contraseña incorrectos");
         }
     }
 }
