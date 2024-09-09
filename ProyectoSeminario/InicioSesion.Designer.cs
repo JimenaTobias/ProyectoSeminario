@@ -33,10 +33,10 @@ namespace ProyectoSeminario
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.btn_ingresar = new System.Windows.Forms.Button();
+            this.btn_salir = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_salir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -46,6 +46,7 @@ namespace ProyectoSeminario
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(266, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(229, 34);
@@ -80,6 +81,17 @@ namespace ProyectoSeminario
             this.btn_ingresar.UseVisualStyleBackColor = true;
             this.btn_ingresar.Click += new System.EventHandler(this.btn_ingresar_Click);
             // 
+            // btn_salir
+            // 
+            this.btn_salir.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_salir.Location = new System.Drawing.Point(384, 175);
+            this.btn_salir.Name = "btn_salir";
+            this.btn_salir.Size = new System.Drawing.Size(111, 41);
+            this.btn_salir.TabIndex = 7;
+            this.btn_salir.Text = "Salir";
+            this.btn_salir.UseVisualStyleBackColor = true;
+            this.btn_salir.Click += new System.EventHandler(this.button2_Click);
+            // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::ProyectoSeminario.Properties.Resources.Logo;
@@ -92,7 +104,7 @@ namespace ProyectoSeminario
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::ProyectoSeminario.Properties.Resources.candado;
+            this.pictureBox2.Image = global::ProyectoSeminario.Properties.Resources.contraseña;
             this.pictureBox2.Location = new System.Drawing.Point(232, 124);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(34, 30);
@@ -102,24 +114,13 @@ namespace ProyectoSeminario
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::ProyectoSeminario.Properties.Resources.usuario;
+            this.pictureBox1.Image = global::ProyectoSeminario.Properties.Resources.usuario1;
             this.pictureBox1.Location = new System.Drawing.Point(232, 73);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(34, 30);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
-            // 
-            // btn_salir
-            // 
-            this.btn_salir.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_salir.Location = new System.Drawing.Point(384, 175);
-            this.btn_salir.Name = "btn_salir";
-            this.btn_salir.Size = new System.Drawing.Size(111, 41);
-            this.btn_salir.TabIndex = 7;
-            this.btn_salir.Text = "Salir";
-            this.btn_salir.UseVisualStyleBackColor = true;
-            this.btn_salir.Click += new System.EventHandler(this.button2_Click);
             // 
             // InicioSesion
             // 
