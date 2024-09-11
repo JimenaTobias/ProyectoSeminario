@@ -42,5 +42,10 @@ namespace ProyectoSeminario
         {
             this.openForm(new Inventario());
         }
+
+        private void btn_categorias_Click(object sender, EventArgs e)
+        {
+            this.openForm(new Categoría());
+        }
     }
 }

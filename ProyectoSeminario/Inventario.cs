@@ -39,7 +39,7 @@ namespace ProyectoSeminario
         {
             int id = Convert.ToInt32(data_grip.SelectedRows[0].Cells[0].Value);
             ProductManagment.EliminarProducto(id);
-            MessageBox.Show("Producto eliminado correctamente!");
+            MessageBox.Show("Producto eliminado.");
             this.fill();
         }
 
@@ -58,7 +58,8 @@ namespace ProyectoSeminario
             int stock = Convert.ToInt32(data_grip.SelectedRows[0].Cells[4].Value);
             Product prd = new Product(name, description, price, stock, 0);
             ProductManagment.updateProduct(prd, id);
-            MessageBox.Show("Producto actualizado correctamente!");
+            MessageBox.Show("Producto actualizado.");
         }
+
     }
 }

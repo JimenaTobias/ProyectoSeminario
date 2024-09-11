@@ -98,6 +98,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Categorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Categorias.Designer.cs">
+      <DependentUpon>Categorias.cs</DependentUpon>
+    </Compile>
     <Compile Include="InicioSesion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,7 +124,9 @@
     </Compile>
     <Compile Include="Models\Dao\Connection.cs" />
     <Compile Include="Models\Dao\Auth.cs" />
+    <Compile Include="Models\Dao\ManejoCategorias.cs" />
     <Compile Include="Models\Dao\ProductManagment.cs" />
+    <Compile Include="Models\Dto\Categoria.cs" />
     <Compile Include="Models\Dto\Product.cs" />
     <Compile Include="Producto.cs">
       <SubType>Form</SubType>
@@ -128,6 +136,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Categorias.resx">
+      <DependentUpon>Categorias.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InicioSesion.resx">
       <DependentUpon>InicioSesion.cs</DependentUpon>
     </EmbeddedResource>
