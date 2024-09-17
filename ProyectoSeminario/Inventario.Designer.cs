@@ -189,6 +189,7 @@ namespace ProyectoSeminario
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Inventario";
             this.Text = "Inventario";
+            this.Load += new System.EventHandler(this.Inventario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.data_grip)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
