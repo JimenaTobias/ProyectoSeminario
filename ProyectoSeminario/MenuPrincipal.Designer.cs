@@ -217,7 +217,7 @@ namespace ProyectoSeminario
             // 
             this.panel_container.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_container.Location = new System.Drawing.Point(365, 0);
-            this.panel_container.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel_container.Margin = new System.Windows.Forms.Padding(4);
             this.panel_container.Name = "panel_container";
             this.panel_container.Size = new System.Drawing.Size(851, 738);
             this.panel_container.TabIndex = 3;
@@ -232,7 +232,7 @@ namespace ProyectoSeminario
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "s";
+            this.Text = "MenuPrincipal";
             this.Load += new System.EventHandler(this.MenuPrincipal_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

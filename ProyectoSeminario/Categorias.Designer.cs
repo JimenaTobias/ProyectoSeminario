@@ -39,14 +39,14 @@ namespace ProyectoSeminario
             this.btn_delete = new System.Windows.Forms.Button();
             this.btn_actualizar = new System.Windows.Forms.Button();
             this.btn_refrescar = new System.Windows.Forms.Button();
-            this.dgv_categoria = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.ID_Categoría = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre_Categoría = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descrip_Categoría = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_categoria = new System.Windows.Forms.DataGridView();
+            this.ID_Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre_Prod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descrip_Prod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_categoria)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_categoria)).BeginInit();
             this.SuspendLayout();
             // 
             // txt_categoria
@@ -116,10 +116,10 @@ namespace ProyectoSeminario
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.dgv_categoria);
             this.groupBox1.Controls.Add(this.btn_delete);
             this.groupBox1.Controls.Add(this.btn_actualizar);
             this.groupBox1.Controls.Add(this.btn_refrescar);
-            this.groupBox1.Controls.Add(this.dgv_categoria);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.groupBox1.Location = new System.Drawing.Point(12, 344);
             this.groupBox1.Name = "groupBox1";
@@ -176,21 +176,6 @@ namespace ProyectoSeminario
             this.btn_refrescar.UseVisualStyleBackColor = false;
             this.btn_refrescar.Click += new System.EventHandler(this.btn_refrescar_Click);
             // 
-            // dgv_categoria
-            // 
-            this.dgv_categoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_categoria.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID_Categoría,
-            this.Nombre_Categoría,
-            this.Descrip_Categoría});
-            this.dgv_categoria.Location = new System.Drawing.Point(7, 22);
-            this.dgv_categoria.Name = "dgv_categoria";
-            this.dgv_categoria.RowHeadersWidth = 51;
-            this.dgv_categoria.RowTemplate.Height = 24;
-            this.dgv_categoria.Size = new System.Drawing.Size(810, 300);
-            this.dgv_categoria.TabIndex = 0;
-            this.dgv_categoria.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_categoria_CellContentClick);
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.txt_descrip);
@@ -206,26 +191,42 @@ namespace ProyectoSeminario
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Ingreso de Categoría";
             // 
-            // ID_Categoría
+            // dgv_categoria
             // 
-            this.ID_Categoría.HeaderText = "ID";
-            this.ID_Categoría.MinimumWidth = 6;
-            this.ID_Categoría.Name = "ID_Categoría";
-            this.ID_Categoría.Width = 125;
+            this.dgv_categoria.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_categoria.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgv_categoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_categoria.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID_Producto,
+            this.Nombre_Prod,
+            this.Descrip_Prod});
+            this.dgv_categoria.Location = new System.Drawing.Point(22, 37);
+            this.dgv_categoria.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgv_categoria.Name = "dgv_categoria";
+            this.dgv_categoria.RowHeadersVisible = false;
+            this.dgv_categoria.RowHeadersWidth = 51;
+            this.dgv_categoria.RowTemplate.Height = 24;
+            this.dgv_categoria.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_categoria.Size = new System.Drawing.Size(731, 269);
+            this.dgv_categoria.TabIndex = 13;
             // 
-            // Nombre_Categoría
+            // ID_Producto
             // 
-            this.Nombre_Categoría.HeaderText = "Nombre";
-            this.Nombre_Categoría.MinimumWidth = 6;
-            this.Nombre_Categoría.Name = "Nombre_Categoría";
-            this.Nombre_Categoría.Width = 125;
+            this.ID_Producto.HeaderText = "ID";
+            this.ID_Producto.MinimumWidth = 6;
+            this.ID_Producto.Name = "ID_Producto";
             // 
-            // Descrip_Categoría
+            // Nombre_Prod
             // 
-            this.Descrip_Categoría.HeaderText = "Descripción Categoría";
-            this.Descrip_Categoría.MinimumWidth = 6;
-            this.Descrip_Categoría.Name = "Descrip_Categoría";
-            this.Descrip_Categoría.Width = 125;
+            this.Nombre_Prod.HeaderText = "Nombre";
+            this.Nombre_Prod.MinimumWidth = 6;
+            this.Nombre_Prod.Name = "Nombre_Prod";
+            // 
+            // Descrip_Prod
+            // 
+            this.Descrip_Prod.HeaderText = "Descripción";
+            this.Descrip_Prod.MinimumWidth = 6;
+            this.Descrip_Prod.Name = "Descrip_Prod";
             // 
             // Categoría
             // 
@@ -239,9 +240,9 @@ namespace ProyectoSeminario
             this.Name = "Categoría";
             this.Text = "Categorías";
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_categoria)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_categoria)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,13 +257,13 @@ namespace ProyectoSeminario
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_agregar;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dgv_categoria;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btn_delete;
         private System.Windows.Forms.Button btn_actualizar;
         private System.Windows.Forms.Button btn_refrescar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID_Categoría;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre_Categoría;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Descrip_Categoría;
+        private System.Windows.Forms.DataGridView dgv_categoria;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_Producto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre_Prod;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descrip_Prod;
     }
 }

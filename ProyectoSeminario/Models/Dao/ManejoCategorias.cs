@@ -72,13 +72,14 @@ namespace ProyectoSeminario.Models.Dao
             try
             {
                 conn.conn.Open();
-                string query = "UPDATE Categorias SET nombre = @nombre_categoria, descripcion_categoria = @descripcion_categoria" +
-                               "WHERE id_categoria = @id_categoria";
+                string query = "UPDATE Categorias SET nombre_categoria = @nombre_categoria, descripcion_categoria = @descripcion_categoria " +
+               "WHERE id_categoria = @id_categoria";
                 MySqlCommand cmd = new MySqlCommand(query, conn.conn);
                 cmd.Parameters.AddWithValue("@nombre_categoria", categoria.nombre);
                 cmd.Parameters.AddWithValue("@descripcion_categoria", categoria.descrip);
                 cmd.Parameters.AddWithValue("@id_categoria", id);
                 cmd.ExecuteNonQuery();
+                Console.WriteLine("ola");
                 conn.conn.Close();
                 return true;
             }
