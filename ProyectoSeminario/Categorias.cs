@@ -79,5 +79,10 @@ namespace ProyectoSeminario
             MessageBox.Show("Categoría eliminado.");
             this.fill();
         }
+
+        private void Categoría_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -24,9 +24,11 @@ namespace ProyectoSeminario
         {
             this.data_grip.Rows.Clear();
             List<Product> prds = ProductManagment.ObtenerTodosLosProductos();
+
             foreach (Product prd in prds)
             {
-                this.data_grip.Rows.Add(prd.id, prd.name, prd.description, prd.price, prd.stock);
+                string categoriaNombre = ProductManagment.ObtenerNombreCategoria(prd.idCategory);
+                this.data_grip.Rows.Add(prd.id, prd.name, prd.description, prd.price, prd.stock, prd.idCategory);
             }
         }
 

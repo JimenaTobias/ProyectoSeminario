@@ -36,17 +36,17 @@ namespace ProyectoSeminario
             this.label1 = new System.Windows.Forms.Label();
             this.btn_agregar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btn_delete = new System.Windows.Forms.Button();
-            this.btn_actualizar = new System.Windows.Forms.Button();
-            this.btn_refrescar = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgv_categoria = new System.Windows.Forms.DataGridView();
             this.ID_Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre_Prod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descrip_Prod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_delete = new System.Windows.Forms.Button();
+            this.btn_actualizar = new System.Windows.Forms.Button();
+            this.btn_refrescar = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_categoria)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // txt_categoria
@@ -128,6 +128,43 @@ namespace ProyectoSeminario
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Categorías Disponibles";
             // 
+            // dgv_categoria
+            // 
+            this.dgv_categoria.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_categoria.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgv_categoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_categoria.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID_Producto,
+            this.Nombre_Prod,
+            this.Descrip_Prod});
+            this.dgv_categoria.Location = new System.Drawing.Point(22, 37);
+            this.dgv_categoria.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgv_categoria.Name = "dgv_categoria";
+            this.dgv_categoria.RowHeadersVisible = false;
+            this.dgv_categoria.RowHeadersWidth = 51;
+            this.dgv_categoria.RowTemplate.Height = 24;
+            this.dgv_categoria.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_categoria.Size = new System.Drawing.Size(731, 269);
+            this.dgv_categoria.TabIndex = 13;
+            // 
+            // ID_Producto
+            // 
+            this.ID_Producto.HeaderText = "ID";
+            this.ID_Producto.MinimumWidth = 6;
+            this.ID_Producto.Name = "ID_Producto";
+            // 
+            // Nombre_Prod
+            // 
+            this.Nombre_Prod.HeaderText = "Nombre";
+            this.Nombre_Prod.MinimumWidth = 6;
+            this.Nombre_Prod.Name = "Nombre_Prod";
+            // 
+            // Descrip_Prod
+            // 
+            this.Descrip_Prod.HeaderText = "Descripción";
+            this.Descrip_Prod.MinimumWidth = 6;
+            this.Descrip_Prod.Name = "Descrip_Prod";
+            // 
             // btn_delete
             // 
             this.btn_delete.BackColor = System.Drawing.Color.IndianRed;
@@ -191,43 +228,6 @@ namespace ProyectoSeminario
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Ingreso de Categoría";
             // 
-            // dgv_categoria
-            // 
-            this.dgv_categoria.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_categoria.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgv_categoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_categoria.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID_Producto,
-            this.Nombre_Prod,
-            this.Descrip_Prod});
-            this.dgv_categoria.Location = new System.Drawing.Point(22, 37);
-            this.dgv_categoria.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dgv_categoria.Name = "dgv_categoria";
-            this.dgv_categoria.RowHeadersVisible = false;
-            this.dgv_categoria.RowHeadersWidth = 51;
-            this.dgv_categoria.RowTemplate.Height = 24;
-            this.dgv_categoria.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_categoria.Size = new System.Drawing.Size(731, 269);
-            this.dgv_categoria.TabIndex = 13;
-            // 
-            // ID_Producto
-            // 
-            this.ID_Producto.HeaderText = "ID";
-            this.ID_Producto.MinimumWidth = 6;
-            this.ID_Producto.Name = "ID_Producto";
-            // 
-            // Nombre_Prod
-            // 
-            this.Nombre_Prod.HeaderText = "Nombre";
-            this.Nombre_Prod.MinimumWidth = 6;
-            this.Nombre_Prod.Name = "Nombre_Prod";
-            // 
-            // Descrip_Prod
-            // 
-            this.Descrip_Prod.HeaderText = "Descripción";
-            this.Descrip_Prod.MinimumWidth = 6;
-            this.Descrip_Prod.Name = "Descrip_Prod";
-            // 
             // Categoría
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -239,10 +239,11 @@ namespace ProyectoSeminario
             this.Controls.Add(this.label1);
             this.Name = "Categoría";
             this.Text = "Categorías";
+            this.Load += new System.EventHandler(this.Categoría_Load);
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_categoria)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_categoria)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -183,5 +183,34 @@ namespace ProyectoSeminario.Models.Dao
             }
             return productos;
         }
+        // Método para obtener el nombre de una categoría por su ID
+        public static string ObtenerNombreCategoria(int? idCategoria)
+        {
+            if (!idCategoria.HasValue)
+                return string.Empty;
+
+            Connection conn = new Connection();
+            string categoriaNombre = string.Empty;
+            try
+            {
+                conn.conn.Open();
+                string query = "SELECT nombre FROM categorias WHERE id_categoria = @id_categoria";
+                MySqlCommand cmd = new MySqlCommand(query, conn.conn);
+                cmd.Parameters.AddWithValue("@id_categoria", idCategoria.Value);
+                MySqlDataReader reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    categoriaNombre = reader.GetString("nombre");
+                }
+                reader.Close();
+                conn.conn.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al obtener nombre de categoría: " + ex.Message);
+                conn.conn.Close();
+            }
+            return categoriaNombre;
+        }
     }
 }
