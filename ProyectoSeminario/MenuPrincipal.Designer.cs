@@ -142,6 +142,7 @@ namespace ProyectoSeminario
             this.btn_cerrarsesion.TabIndex = 14;
             this.btn_cerrarsesion.Text = "Cerrar Sesión";
             this.btn_cerrarsesion.UseVisualStyleBackColor = false;
+            this.btn_cerrarsesion.Click += new System.EventHandler(this.btn_cerrarsesion_Click);
             // 
             // btn_categorias
             // 

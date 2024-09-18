@@ -47,5 +47,15 @@ namespace ProyectoSeminario
         {
             this.openForm(new Categoría());
         }
+
+        private void btn_cerrarsesion_Click(object sender, EventArgs e)
+        {
+            // Cierra el formulario actual
+            this.Close();
+
+            // Crea y muestra el formulario de inicio de sesión
+            InicioSesion inicioSesionForm = new InicioSesion();
+            inicioSesionForm.Show();
+        }
     }
 }

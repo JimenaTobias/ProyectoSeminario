@@ -31,16 +31,16 @@ namespace ProyectoSeminario
         {
             this.btn_refrescar = new System.Windows.Forms.Button();
             this.data_grip = new System.Windows.Forms.DataGridView();
+            this.btn_delete = new System.Windows.Forms.Button();
+            this.btn_actualizar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.ID_Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre_Prod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descrip_Prod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio_Prod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad_Prod = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID_Categoría = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btn_delete = new System.Windows.Forms.Button();
-            this.btn_actualizar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.Nombre_Categoría = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.data_grip)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -72,7 +72,7 @@ namespace ProyectoSeminario
             this.Descrip_Prod,
             this.Precio_Prod,
             this.Cantidad_Prod,
-            this.ID_Categoría});
+            this.Nombre_Categoría});
             this.data_grip.Location = new System.Drawing.Point(28, 33);
             this.data_grip.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.data_grip.Name = "data_grip";
@@ -83,42 +83,6 @@ namespace ProyectoSeminario
             this.data_grip.Size = new System.Drawing.Size(948, 522);
             this.data_grip.TabIndex = 7;
             this.data_grip.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_grip_CellContentClick);
-            // 
-            // ID_Producto
-            // 
-            this.ID_Producto.HeaderText = "ID";
-            this.ID_Producto.MinimumWidth = 6;
-            this.ID_Producto.Name = "ID_Producto";
-            // 
-            // Nombre_Prod
-            // 
-            this.Nombre_Prod.HeaderText = "Nombre";
-            this.Nombre_Prod.MinimumWidth = 6;
-            this.Nombre_Prod.Name = "Nombre_Prod";
-            // 
-            // Descrip_Prod
-            // 
-            this.Descrip_Prod.HeaderText = "Descripción";
-            this.Descrip_Prod.MinimumWidth = 6;
-            this.Descrip_Prod.Name = "Descrip_Prod";
-            // 
-            // Precio_Prod
-            // 
-            this.Precio_Prod.HeaderText = "Precio";
-            this.Precio_Prod.MinimumWidth = 6;
-            this.Precio_Prod.Name = "Precio_Prod";
-            // 
-            // Cantidad_Prod
-            // 
-            this.Cantidad_Prod.HeaderText = "Stock";
-            this.Cantidad_Prod.MinimumWidth = 6;
-            this.Cantidad_Prod.Name = "Cantidad_Prod";
-            // 
-            // ID_Categoría
-            // 
-            this.ID_Categoría.HeaderText = "Categoría";
-            this.ID_Categoría.MinimumWidth = 6;
-            this.ID_Categoría.Name = "ID_Categoría";
             // 
             // btn_delete
             // 
@@ -177,6 +141,42 @@ namespace ProyectoSeminario
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             // 
+            // ID_Producto
+            // 
+            this.ID_Producto.HeaderText = "ID";
+            this.ID_Producto.MinimumWidth = 6;
+            this.ID_Producto.Name = "ID_Producto";
+            // 
+            // Nombre_Prod
+            // 
+            this.Nombre_Prod.HeaderText = "Nombre";
+            this.Nombre_Prod.MinimumWidth = 6;
+            this.Nombre_Prod.Name = "Nombre_Prod";
+            // 
+            // Descrip_Prod
+            // 
+            this.Descrip_Prod.HeaderText = "Descripción";
+            this.Descrip_Prod.MinimumWidth = 6;
+            this.Descrip_Prod.Name = "Descrip_Prod";
+            // 
+            // Precio_Prod
+            // 
+            this.Precio_Prod.HeaderText = "Precio";
+            this.Precio_Prod.MinimumWidth = 6;
+            this.Precio_Prod.Name = "Precio_Prod";
+            // 
+            // Cantidad_Prod
+            // 
+            this.Cantidad_Prod.HeaderText = "Stock";
+            this.Cantidad_Prod.MinimumWidth = 6;
+            this.Cantidad_Prod.Name = "Cantidad_Prod";
+            // 
+            // Nombre_Categoría
+            // 
+            this.Nombre_Categoría.HeaderText = "Categoría";
+            this.Nombre_Categoría.MinimumWidth = 6;
+            this.Nombre_Categoría.Name = "Nombre_Categoría";
+            // 
             // Inventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -209,6 +209,6 @@ namespace ProyectoSeminario
         private System.Windows.Forms.DataGridViewTextBoxColumn Descrip_Prod;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio_Prod;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad_Prod;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID_Categoría;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre_Categoría;
     }
 }
