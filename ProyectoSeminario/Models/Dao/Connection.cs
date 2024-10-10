@@ -13,7 +13,7 @@ namespace ProyectoSeminario.Models.Dao
 
         public Connection()
         {
-            string stringConnetion = "server=localhost;user=root;database=tienda_accesorios_joyeria;password=juliarashell;";
+            string stringConnetion = "server=localhost;user=root;database=tienda_accesorios_joyeria;password=Jimena12345;";
             this.conn = new MySqlConnection(stringConnetion);
         }
     }

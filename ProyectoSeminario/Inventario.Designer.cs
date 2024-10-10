@@ -35,12 +35,14 @@ namespace ProyectoSeminario
             this.btn_actualizar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.ID_Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre_Prod = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descrip_Prod = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio_Prod = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad_Prod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cb_filtro = new System.Windows.Forms.ComboBox();
             this.Nombre_Categoría = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad_Prod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio_Prod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descrip_Prod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre_Prod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID_Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.data_grip)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -52,7 +54,7 @@ namespace ProyectoSeminario
             this.btn_refrescar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_refrescar.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.btn_refrescar.ForeColor = System.Drawing.Color.White;
-            this.btn_refrescar.Location = new System.Drawing.Point(25, 569);
+            this.btn_refrescar.Location = new System.Drawing.Point(28, 616);
             this.btn_refrescar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_refrescar.Name = "btn_refrescar";
             this.btn_refrescar.Size = new System.Drawing.Size(149, 38);
@@ -73,7 +75,7 @@ namespace ProyectoSeminario
             this.Precio_Prod,
             this.Cantidad_Prod,
             this.Nombre_Categoría});
-            this.data_grip.Location = new System.Drawing.Point(28, 33);
+            this.data_grip.Location = new System.Drawing.Point(28, 75);
             this.data_grip.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.data_grip.Name = "data_grip";
             this.data_grip.RowHeadersVisible = false;
@@ -91,7 +93,7 @@ namespace ProyectoSeminario
             this.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_delete.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.btn_delete.ForeColor = System.Drawing.Color.White;
-            this.btn_delete.Location = new System.Drawing.Point(334, 569);
+            this.btn_delete.Location = new System.Drawing.Point(337, 616);
             this.btn_delete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(149, 38);
@@ -107,7 +109,7 @@ namespace ProyectoSeminario
             this.btn_actualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_actualizar.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.btn_actualizar.ForeColor = System.Drawing.Color.White;
-            this.btn_actualizar.Location = new System.Drawing.Point(180, 569);
+            this.btn_actualizar.Location = new System.Drawing.Point(183, 616);
             this.btn_actualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_actualizar.Name = "btn_actualizar";
             this.btn_actualizar.Size = new System.Drawing.Size(149, 38);
@@ -128,6 +130,8 @@ namespace ProyectoSeminario
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.cb_filtro);
             this.groupBox2.Controls.Add(this.btn_delete);
             this.groupBox2.Controls.Add(this.btn_actualizar);
             this.groupBox2.Controls.Add(this.data_grip);
@@ -137,39 +141,27 @@ namespace ProyectoSeminario
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(999, 628);
+            this.groupBox2.Size = new System.Drawing.Size(999, 670);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             // 
-            // ID_Producto
+            // label2
             // 
-            this.ID_Producto.HeaderText = "ID";
-            this.ID_Producto.MinimumWidth = 6;
-            this.ID_Producto.Name = "ID_Producto";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(7, 27);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(170, 21);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Elija una categoría:";
             // 
-            // Nombre_Prod
+            // cb_filtro
             // 
-            this.Nombre_Prod.HeaderText = "Nombre";
-            this.Nombre_Prod.MinimumWidth = 6;
-            this.Nombre_Prod.Name = "Nombre_Prod";
-            // 
-            // Descrip_Prod
-            // 
-            this.Descrip_Prod.HeaderText = "Descripción";
-            this.Descrip_Prod.MinimumWidth = 6;
-            this.Descrip_Prod.Name = "Descrip_Prod";
-            // 
-            // Precio_Prod
-            // 
-            this.Precio_Prod.HeaderText = "Precio";
-            this.Precio_Prod.MinimumWidth = 6;
-            this.Precio_Prod.Name = "Precio_Prod";
-            // 
-            // Cantidad_Prod
-            // 
-            this.Cantidad_Prod.HeaderText = "Stock";
-            this.Cantidad_Prod.MinimumWidth = 6;
-            this.Cantidad_Prod.Name = "Cantidad_Prod";
+            this.cb_filtro.FormattingEnabled = true;
+            this.cb_filtro.Location = new System.Drawing.Point(211, 24);
+            this.cb_filtro.Name = "cb_filtro";
+            this.cb_filtro.Size = new System.Drawing.Size(179, 29);
+            this.cb_filtro.TabIndex = 10;
+            this.cb_filtro.SelectedIndexChanged += new System.EventHandler(this.cb_filtro_SelectedIndexChanged);
             // 
             // Nombre_Categoría
             // 
@@ -177,12 +169,42 @@ namespace ProyectoSeminario
             this.Nombre_Categoría.MinimumWidth = 6;
             this.Nombre_Categoría.Name = "Nombre_Categoría";
             // 
+            // Cantidad_Prod
+            // 
+            this.Cantidad_Prod.HeaderText = "Stock";
+            this.Cantidad_Prod.MinimumWidth = 6;
+            this.Cantidad_Prod.Name = "Cantidad_Prod";
+            // 
+            // Precio_Prod
+            // 
+            this.Precio_Prod.HeaderText = "Precio";
+            this.Precio_Prod.MinimumWidth = 6;
+            this.Precio_Prod.Name = "Precio_Prod";
+            // 
+            // Descrip_Prod
+            // 
+            this.Descrip_Prod.HeaderText = "Descripción";
+            this.Descrip_Prod.MinimumWidth = 6;
+            this.Descrip_Prod.Name = "Descrip_Prod";
+            // 
+            // Nombre_Prod
+            // 
+            this.Nombre_Prod.HeaderText = "Nombre";
+            this.Nombre_Prod.MinimumWidth = 6;
+            this.Nombre_Prod.Name = "Nombre_Prod";
+            // 
+            // ID_Producto
+            // 
+            this.ID_Producto.HeaderText = "ID";
+            this.ID_Producto.MinimumWidth = 6;
+            this.ID_Producto.Name = "ID_Producto";
+            // 
             // Inventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(235)))), ((int)(((byte)(212)))));
-            this.ClientSize = new System.Drawing.Size(1056, 727);
+            this.ClientSize = new System.Drawing.Size(1056, 767);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -192,6 +214,7 @@ namespace ProyectoSeminario
             this.Load += new System.EventHandler(this.Inventario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.data_grip)).EndInit();
             this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -204,6 +227,8 @@ namespace ProyectoSeminario
         private System.Windows.Forms.Button btn_delete;
         private System.Windows.Forms.Button btn_actualizar;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cb_filtro;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_Producto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre_Prod;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descrip_Prod;

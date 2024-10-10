@@ -72,17 +72,17 @@ namespace ProyectoSeminario
 
         }
 
-        private void btn_delete_Click(object sender, EventArgs e)
-        {
-            int id = Convert.ToInt32(dgv_categoria.SelectedRows[0].Cells[0].Value);
-            ManejoCategorias.EliminarCategoria(id);
-            MessageBox.Show("Categoría eliminado.");
-            this.fill();
-        }
-
         private void Categoría_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_eliminar_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(dgv_categoria.SelectedRows[0].Cells[0].Value);
+            ManejoCategorias.EliminarCategoria(id);
+            MessageBox.Show("Categoría eliminada.");
+            this.fill(); ;
         }
     }
 }

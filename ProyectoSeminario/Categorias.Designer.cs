@@ -40,10 +40,10 @@ namespace ProyectoSeminario
             this.ID_Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre_Prod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descrip_Prod = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btn_delete = new System.Windows.Forms.Button();
             this.btn_actualizar = new System.Windows.Forms.Button();
             this.btn_refrescar = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btn_eliminar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_categoria)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -116,8 +116,8 @@ namespace ProyectoSeminario
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btn_eliminar);
             this.groupBox1.Controls.Add(this.dgv_categoria);
-            this.groupBox1.Controls.Add(this.btn_delete);
             this.groupBox1.Controls.Add(this.btn_actualizar);
             this.groupBox1.Controls.Add(this.btn_refrescar);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 10F);
@@ -164,22 +164,6 @@ namespace ProyectoSeminario
             this.Descrip_Prod.HeaderText = "Descripción";
             this.Descrip_Prod.MinimumWidth = 6;
             this.Descrip_Prod.Name = "Descrip_Prod";
-            // 
-            // btn_delete
-            // 
-            this.btn_delete.BackColor = System.Drawing.Color.IndianRed;
-            this.btn_delete.FlatAppearance.BorderSize = 0;
-            this.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_delete.Font = new System.Drawing.Font("Century Gothic", 11F);
-            this.btn_delete.ForeColor = System.Drawing.Color.Snow;
-            this.btn_delete.Location = new System.Drawing.Point(470, 334);
-            this.btn_delete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_delete.Name = "btn_delete";
-            this.btn_delete.Size = new System.Drawing.Size(149, 38);
-            this.btn_delete.TabIndex = 12;
-            this.btn_delete.Text = "Eliminar";
-            this.btn_delete.UseVisualStyleBackColor = false;
-            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // btn_actualizar
             // 
@@ -228,6 +212,22 @@ namespace ProyectoSeminario
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Ingreso de Categoría";
             // 
+            // btn_eliminar
+            // 
+            this.btn_eliminar.BackColor = System.Drawing.Color.IndianRed;
+            this.btn_eliminar.FlatAppearance.BorderSize = 0;
+            this.btn_eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_eliminar.Font = new System.Drawing.Font("Century Gothic", 11F);
+            this.btn_eliminar.ForeColor = System.Drawing.Color.White;
+            this.btn_eliminar.Location = new System.Drawing.Point(471, 334);
+            this.btn_eliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_eliminar.Name = "btn_eliminar";
+            this.btn_eliminar.Size = new System.Drawing.Size(149, 38);
+            this.btn_eliminar.TabIndex = 14;
+            this.btn_eliminar.Text = "Eliminar";
+            this.btn_eliminar.UseVisualStyleBackColor = false;
+            this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
+            // 
             // Categoría
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -259,12 +259,12 @@ namespace ProyectoSeminario
         private System.Windows.Forms.Button btn_agregar;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button btn_delete;
         private System.Windows.Forms.Button btn_actualizar;
         private System.Windows.Forms.Button btn_refrescar;
         private System.Windows.Forms.DataGridView dgv_categoria;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_Producto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre_Prod;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descrip_Prod;
+        private System.Windows.Forms.Button btn_eliminar;
     }
 }
